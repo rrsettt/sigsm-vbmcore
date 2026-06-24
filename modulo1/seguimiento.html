@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <title>Seguimiento Ambulancias</title>
+</head>
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <a href="https://www.hc.edu.uy/">
+                <img src="../assets/img/Logo_Hc.png" alt="Logo Hospital de Clínicas">
+            </a>
+        </div>
+
+        <div class="acciones-header">
+
+            <a class="boton" href="nuevoTraslado.html">
+                (+) Nuevo traslado
+            </a>
+
+            <a class="boton boton-login" href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="contenedor contenedor-seguimiento">
+
+        <section class="documentacion">
+
+            <div class="principal">
+
+                <img
+                    class="imagen-principal"
+                    src="../assets/img/Clinicas.png"
+                    alt="Hospital de Clínicas"
+                >
+
+                <div class="texto-principal">
+
+                    <h1>Seguimiento de Traslados</h1>
+
+                    <p>
+                        Visualización del estado actual de ambulancias y vehículos.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="seguimiento-contenedor">
+
+                <div class="estado curso">
+                    TRASLADO EN CURSO
+                </div>
+
+                <img
+                    class="imagen-mapa"
+                    src="../assets/img/MapaHospital.png"
+                    alt="Mapa de seguimiento"
+                >
+
+                <div class="info-mapa">
+
+                    <h3>Solicitud #067</h3>
+
+                    <p><strong>Chofer:</strong> Tiago Velozo</p>
+                    <p><strong>Enfermero:</strong> Dante Gomez</p>
+                    <p><strong>Paciente:</strong> Benjamin Monteverde</p>
+                    <p><strong>Origen:</strong> Hospital de Clínicas</p>
+                    <p><strong>Destino:</strong> Hospital Español</p>
+                    <p><strong>Salida:</strong> 12:45</p>
+
+                </div>
+
+                <a class="boton" href="detalleTraslado.html">
+                    Ver seguimiento
+                </a>
+
+            </div>
+
+            <div class="seguimiento-card">
+
+                <div class="estado pendiente">
+                    PENDIENTE
+                </div>
+
+                <h3>Solicitud #068</h3>
+
+                <p><strong>Chofer:</strong> Thiago Blanco</p>
+
+                <p><strong>Paciente:</strong> Benjamin Monteverde</p>
+
+                <p>Traslado programado</p>
+
+            </div>
+
+            <div class="seguimiento-card">
+
+                <div class="estado finalizado">
+                    FINALIZADO
+                </div>
+
+                <h3>Solicitud #069</h3>
+
+                <p><strong>Chofer:</strong> Tiago Velozo</p>
+
+                <p><strong>Paciente:</strong> Benjamin Monteverde</p>
+
+                <p>Traslado completado</p>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

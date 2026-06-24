@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <title>Nuevo Traslado</title>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <a href="seguimiento.html">
+                <img src="../assets/img/Logo_Hc.png" alt="Logo Hospital de Clínicas">
+            </a>
+        </div>
+
+        <div class="acciones-header">
+
+            <a class="boton" href="seguimiento.html">
+                ← Volver a Seguimiento
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="contenedor contenedor-simple">
+
+        <section class="encuesta">
+
+            <h2>Nuevo Traslado</h2>
+
+            <form>
+
+                <label for="conductor">
+                    Conductor
+                </label>
+
+                <select id="conductor" name="conductor" required>
+                    <option value="" selected disabled>
+                        Seleccionar conductor
+                    </option>
+                    <option>Carlos Rodríguez</option>
+                    <option>Martín Pereira</option>
+                </select>
+
+                <br><br>
+
+                <label for="enfermero">
+                    Enfermero
+                </label>
+
+                <select id="enfermero" name="enfermero" required>
+                    <option value="" selected disabled>
+                        Seleccionar enfermero
+                    </option>
+                    <option>Laura Gómez</option>
+                    <option>María Fernández</option>
+                </select>
+
+                <br><br>
+
+                <label for="paciente">
+                    Paciente / Elemento
+                </label>
+
+                <input
+                    type="text"
+                    id="paciente"
+                    name="paciente"
+                    class="campo"
+                    required
+                >
+
+                <br><br>
+
+                <label for="vehiculo">
+                    Vehículo
+                </label>
+
+                <select id="vehiculo" name="vehiculo" required>
+                    <option value="" selected disabled>
+                        Seleccionar vehículo
+                    </option>
+                    <option>Ambulancia</option>
+                    <option>Auto Hospital</option>
+                </select>
+
+                <br><br>
+
+                <label for="origen">
+                    Origen
+                </label>
+
+                <input
+                    type="text"
+                    id="origen"
+                    name="origen"
+                    class="campo"
+                    placeholder="Lugar de salida"
+                    required
+                >
+
+                <br><br>
+
+                <label for="destino">
+                    Destino
+                </label>
+
+                <input
+                    type="text"
+                    id="destino"
+                    name="destino"
+                    class="campo"
+                    placeholder="Destino"
+                    required
+                >
+
+                <br><br>
+
+                <label for="salida">
+                    Hora de salida
+                </label>
+
+                <input
+                    type="time"
+                    id="salida"
+                    name="salida"
+                    class="campo"
+                    required
+                >
+
+                <br><br>
+
+                <label for="llegada">
+                    Hora estimada de llegada
+                </label>
+
+                <input
+                    type="time"
+                    id="llegada"
+                    name="llegada"
+                    class="campo"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit" class="boton">
+                    Guardar Solicitud
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

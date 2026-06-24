@@ -1,0 +1,410 @@
+body{
+	margin:0;
+	font-family:Segoe UI,sans-serif;
+	background:#F3F6FA;
+	color:#1F2937;
+}
+
+.encabezado{
+	background:#ffffff;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:10px;
+	padding:15px;
+	box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+.logo a{
+	text-decoration:none;
+}
+
+.logo img{
+	width:180px;
+	height:auto;
+}
+
+.navegacion{
+	display:none;
+}
+
+.navegacion a{
+	text-decoration:none;
+	color:#1F2937;
+	font-weight:600;
+	padding:8px 12px;
+	border-radius:8px;
+}
+
+.navegacion a:hover,
+.navegacion a.active{
+	background:#EAF4FF;
+	color:#0B5ED7;
+}
+
+.boton{
+	background:#0B5ED7;
+	color:rgb(255, 255, 255);
+	padding:12px 16px;
+	border:none;
+	border-radius:10px;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:15px;
+	font-weight:600;
+	text-align:center;
+}
+
+.boton:hover{
+	opacity:.92;
+}
+
+.acciones-header{
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	width:100%;
+}
+
+.boton-login{
+	background:#198754;
+}
+
+.contenedor{
+	width:95%;
+	margin:20px auto;
+	display:flex;
+	flex-direction:column;
+	gap:20px;
+}
+
+.barra-lateral{
+	display:flex;
+	flex-direction:column;
+	gap:15px;
+}
+
+.servicios,
+.encuesta{
+	background:#ffffff;
+	padding:15px;
+	border-radius:12px;
+	box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.servicios h3,
+.encuesta h3{
+	color:#0B5ED7;
+	margin-top:0;
+}
+
+.item{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	padding:10px 0;
+	text-decoration:none;
+	color:#1F2937;
+}
+
+.item img{
+	width:70px;
+	height:70px;
+	object-fit:cover;
+	border-radius:10px;
+}
+
+.principal{
+	position:relative;
+	min-height:220px;
+	border-radius:12px;
+	overflow:hidden;
+	color:rgb(255, 255, 255);
+}
+
+.imagen-principal{
+	position:absolute;
+	inset:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+.texto-principal{
+	position:relative;
+	padding:20px;
+}
+
+.documentacion{
+	display:flex;
+	flex-direction:column;
+	gap:20px;
+}
+
+.tarjeta{
+	display:flex;
+	flex-direction:column;
+	background:#fff;
+	border-radius:12px;
+	overflow:hidden;
+	box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+.tarjeta img{
+	width:100%;
+	height:180px;
+	object-fit:cover;
+}
+
+.contenido-tarjeta{
+	padding:15px;
+}
+
+.encuesta{
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+}
+
+.encuesta h2{
+	color:#0B5ED7;
+	margin:0;
+}
+
+.encuesta label{
+	font-weight:600;
+}
+
+.encuesta select,
+.encuesta textarea{
+	width:100%;
+	padding:10px;
+	border-radius:10px;
+	border:1px solid #D1D5DB;
+}
+
+.encuesta textarea{
+	resize:none;
+}
+
+.campo{
+	width:100%;
+	box-sizing:border-box;
+	padding:10px;
+	border-radius:10px;
+	border:1px solid #D1D5DB;
+}
+
+.seguimiento-card{
+	background:rgb(255, 255, 255);
+	padding:20px;
+	border-radius:12px;
+	display:flex;
+	flex-direction:column;
+	gap:12px;
+	box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+.estado{
+	width:max-content;
+	padding:8px 12px;
+	border-radius:20px;
+	font-size:13px;
+	font-weight:700;
+}
+
+.curso{
+	background:#D1FAE5;
+	color:#065F46;
+}
+
+.pendiente{
+	background:#FEF3C7;
+	color:#92400E;
+}
+
+.finalizado{
+	background:#E5E7EB;
+	color:#374151;
+}
+
+.timeline{
+	display:flex;
+	flex-direction:column;
+	gap:15px;
+	margin-top:20px;
+}
+
+.paso{
+	background:#EAF4FF;
+	padding:15px;
+	border-radius:10px;
+	text-align:center;
+}
+
+.paso.activo{
+	background:#0B5ED7;
+	color:rgb(255, 255, 255);
+}
+
+
+.seguimiento-contenedor{
+	background:#ffffff;
+	padding:20px;
+	border-radius:12px;
+	box-shadow:0 2px 8px rgba(0,0,0,.06);
+	display:flex;
+	flex-direction:column;
+	gap:15px;
+}
+
+.imagen-mapa{
+	width:100%;
+	max-width:650px;
+	height:250px;
+	object-fit:cover;
+	border-radius:10px;
+	border:1px solid #D1D5DB;
+}
+
+.info-mapa{
+	display:flex;
+	flex-direction:column;
+	gap:8px;
+}
+
+.info-mapa h3{
+	margin:0;
+	color:#0B5ED7;
+}
+
+.info-mapa p{
+	margin:0;
+}
+
+.seguimiento-contenedor .boton{
+	width:max-content;
+}
+
+@media (min-width:768px){
+
+	.encabezado{
+		flex-direction:row;
+		justify-content:space-between;
+	}
+
+	.navegacion{
+		display:flex;
+		gap:15px;
+	}
+
+	.acciones-header{
+		width:auto;
+		flex-direction:row;
+		align-items:center;
+		gap:12px;
+	}
+
+	.barra-lateral{
+		flex-direction:row;
+	}
+
+	.servicios,
+	.encuesta{
+		flex:1;
+	}
+
+	.timeline{
+		max-width:500px;
+		margin:auto;
+	}
+
+}
+
+@media (min-width:1024px){
+
+	.contenedor{
+		width:90%;
+		display:grid;
+		grid-template-columns:280px 1fr;
+		gap:25px;
+		align-items:start;
+	}
+
+	.barra-lateral{
+		flex-direction:column;
+	}
+
+	.principal{
+		min-height:300px;
+	}
+
+	.tarjeta{
+		flex-direction:row;
+		min-height:150px;
+	}
+
+	.tarjeta img{
+		width:180px;
+		height:100%;
+	}
+
+	.contenido-tarjeta{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+	}
+
+	.encuesta{
+		padding:25px;
+	}
+
+	.imagen-mapa{
+		max-width:600px;
+		height:220px;
+	}
+
+	.seguimiento-contenedor{
+		padding:25px;
+	}
+
+
+	.contenedor-seguimiento{
+		width:90%;
+		max-width:1400px;
+		margin:20px auto;
+		display:block;
+	}
+
+	.contenedor-seguimiento .documentacion{
+		width:100%;
+	}
+
+	.contenedor-seguimiento .principal,
+	.contenedor-seguimiento .seguimiento-contenedor,
+	.contenedor-seguimiento .seguimiento-card{
+		width:100%;
+		box-sizing:border-box;
+	}
+
+	.contenedor-seguimiento .imagen-mapa{
+		width:100%;
+		max-width:100%;
+		height:350px;
+	}
+
+
+	.contenedor-simple{
+		display:block;
+		width:95%;
+		max-width:none;
+	}
+
+	.contenedor-simple .encuesta,
+	.contenedor-simple .seguimiento-card{
+		max-width:900px;
+		margin:auto;
+		padding:35px;
+	}
+
+}

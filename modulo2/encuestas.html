@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <title>Encuesta de Satisfacción</title>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <a href="portal.html">
+                <img src="../assets/img/Logo_Hc.png" alt="Hospital">
+            </a>
+        </div>
+
+        <div class="acciones-header">
+
+            <a class="boton" href="portal.html">
+                ← Volver al Portal
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="contenedor contenedor-simple">
+
+        <section class="encuesta">
+
+            <h2>Encuesta de Satisfacción</h2>
+
+            <form>
+
+                <label for="calificacion">
+                    ¿Cómo califica la atención recibida?
+                </label>
+
+                <select
+                    id="calificacion"
+                    name="calificacion"
+                    required
+                >
+                    <option value="" selected disabled>
+                        Seleccione una opción
+                    </option>
+
+                    <option>Excelente</option>
+                    <option>Buena</option>
+                    <option>Regular</option>
+                    <option>Mala</option>
+                </select>
+
+                <br><br>
+
+                <label for="comentarios">
+                    Comentarios
+                </label>
+
+                <textarea
+                    id="comentarios"
+                    name="comentarios"
+                    rows="6"
+                    placeholder="Escriba su experiencia aquí"
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit" class="boton">
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
