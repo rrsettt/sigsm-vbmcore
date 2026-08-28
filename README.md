@@ -1,2 +1,21 @@
-# vbm-proyecto
-Proyecto de Egreso Hosptial De Clinicas
+# S.I.G.M.S VBMCore
+
+➤Proyecto de Egreso realizado para el hospital de clínicas con el fin de optimizar procesos ㅤㅤㅤque actualmente le generan un coste o no son eficientes, incluye dos módulos
+
+
+
+
+
+## Modulo 1 (📃)
+
+- Portal de documentacion web
+- Información de enfermedades y tratamientos
+
+## Modulo 2 (🚑)
+
+- Seguimiento de ambulancias
+- Asignacion de: Chofer, enfermero (acompañante), Paciente y/o elemento a trasladar
+
+
+
+
