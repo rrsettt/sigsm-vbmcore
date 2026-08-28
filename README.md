@@ -1,4 +1,4 @@
-![Logo del Proyecto]([https://i.imgur.com/njDcY3z.png](https://i.imgur.com/MywHnhc.png))
+![Logo del Proyecto]([https://i.imgur.com/njDcY3z.png])
 
 
 # S.I.G.M.S VBMCore
