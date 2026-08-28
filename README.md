@@ -1,7 +1,9 @@
+![Logo del Proyecto](https://i.imgur.com/njDcY3z.png)
+
+
 # S.I.G.M.S VBMCore
 
 ➤Proyecto de Egreso realizado para el hospital de clínicas con el fin de optimizar procesos ㅤㅤㅤque actualmente le generan un coste o no son eficientes, incluye dos módulos
-
 
 
 
@@ -15,7 +17,5 @@
 
 - Seguimiento de ambulancias
 - Asignacion de: Chofer, enfermero (acompañante), Paciente y/o elemento a trasladar
-
-
 
 
