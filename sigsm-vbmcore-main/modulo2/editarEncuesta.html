@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estiloadmin.css">
+    <title>Editar Encuesta</title>
+
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-login="login.html">
+
+<header class="header">
+
+    <a href="https://www.hc.edu.uy/" target="_blank" class="logo">
+        <img src="../assets/img/Logo_Hc.png" alt="Hospital">
+    </a>
+
+    <div class="admin">
+        Administrador
+    </div>
+
+    <a class="boton" href="encuestasAdmin.html">
+        ← Volver
+    </a>
+
+</header>
+
+<section class="dashboard">
+
+    <h1>Editar Encuesta</h1>
+
+    <form id="formEncuesta">
+
+        <label for="titulo">
+            Título
+        </label>
+
+        <input
+            type="text"
+            id="titulo"
+            required
+        >
+
+        <br><br>
+
+        <label for="descripcion">
+            Descripción
+        </label>
+
+        <textarea
+            id="descripcion"
+            rows="4"
+        ></textarea>
+
+        <br><br>
+
+        <label>
+            <input
+                type="checkbox"
+                id="activa"
+            >
+            Encuesta activa
+        </label>
+
+        <h3>Preguntas</h3>
+
+        <div id="preguntas">
+            Cargando preguntas...
+        </div>
+
+        <br>
+
+        <button
+            type="button"
+            id="agregarPregunta"
+            class="btn"
+        >
+            Agregar pregunta
+        </button>
+
+        <br><br>
+
+        <p id="mensaje"></p>
+
+        <button
+            type="submit"
+            class="btn"
+        >
+            Guardar cambios
+        </button>
+
+    </form>
+
+</section>
+
+<script src="../assets/js/protegerSesion.js"></script>
+<script src="../assets/js/editarEncuesta.js"></script>
+
+</body>
+</html>

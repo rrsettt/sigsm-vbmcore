@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estiloadmin.css?v=2">
+    <title>Panel de Documentación</title>
+    <!-- para que no se vea el contenido de la pg antes del login-->
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-login="login.html">
+
+<header class="header">
+
+    <a
+        href="https://www.hc.edu.uy/"
+        target="_blank"
+        class="logo"
+    >
+        <img
+            src="../assets/img/Logo_Hc.png"
+            alt="Hospital"
+        >
+    </a>
+
+    <div class="admin">
+        Administrador
+    </div>
+
+    <a
+        class="btn"
+        href="admins.html"
+    >
+        ← Volver al panel
+    </a>
+
+</header>
+
+<section class="dashboard">
+
+    <h1>
+        Panel de Administración de Documentación
+    </h1>
+
+    <a
+        class="btn"
+        href="nuevoDocumento.html"
+    >
+        Nuevo Documento
+    </a>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Categoría</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaDocumentos">
+
+            <tr>
+                <td colspan="5">
+                    Cargando documentos...
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<script src="../assets/js/protegerSesion.js"></script>
+<script src="../assets/js/logout.js"></script>
+<script src="../assets/js/documentosAdmin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css?v=2">
+    <title>Iniciar Sesión</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <a href="https://www.hc.edu.uy/" target="_blank"> <img src="../assets/img/Logo_Hc.png" alt="Logo Hospital de Clínicas"></a>
+        </div>
+    </header>
+
+
+    <main class="contenedor-simple">
+
+<section class="login-card">
+
+    <div class="login-formulario">
+
+        <h2>Iniciar Sesión</h2>
+
+        <form id="formularioLogin">
+
+            <label for="usuario">Usuario</label>
+
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                class="campo"
+                placeholder="Ingrese su usuario"
+                required
+            >
+
+            <label for="password">Contraseña</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                class="campo"
+                placeholder="Ingrese su contraseña"
+                required
+            >
+
+            <p id="mensaje"></p>
+
+            <button type="submit" class="boton">
+                Ingresar
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="login-imagen">
+        <img src="../assets/img/Clinicas.png" alt="Hospital de Clínicas">
+    </div>
+
+</section>
+
+    </main>
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #1f2937;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+.acciones-header {
+    width: 100%;
+}
+
+#cerrarSesion {
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #dc2626;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#cerrarSesion:hover {
+    background: #b91c1c;
+}
+
+.contenedor-admin {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bienvenida h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.bienvenida p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.opciones-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opcion-admin {
+    background: #ffffff;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.opcion-admin h2 {
+    margin: 0 0 10px;
+    color: #0b5ed7;
+    font-size: 22px;
+}
+
+.opcion-admin p {
+    margin: 0 0 20px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #094db1;
+}
+
+@media (min-width: 768px) {
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .acciones-header {
+        width: auto;
+    }
+
+    #cerrarSesion {
+        width: auto;
+    }
+
+    .contenedor-admin {
+        margin: 45px auto;
+    }
+
+    .bienvenida h1 {
+        font-size: 32px;
+    }
+
+    .opciones-admin {
+        flex-direction: row;
+    }
+
+    .opcion-admin {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .boton {
+        display: inline-block;
+        width: auto;
+    }
+}

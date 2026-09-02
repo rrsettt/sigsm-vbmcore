@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/admins.css?v=2">
+    <title>Panel de Funcionarios</title>
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-login="login.html">
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <a href="https://www.hc.edu.uy/" target="_blank">
+                <img src="../assets/img/Logo_Hc.png" alt="Logo Hospital de Clínicas">
+            </a>
+        </div>
+
+        <div class="acciones-header">
+            <button id="cerrarSesion">Cerrar Sesion</button>
+        </div>
+
+    </header>
+
+    <main class="contenedor-admin">
+
+        <section class="bienvenida">
+
+            <h1>Panel de Funcionarios</h1>
+
+            <p>
+                Seleccione el módulo que desea administrar.
+            </p>
+
+        </section>
+
+        <section class="opciones-admin">
+
+            <article class="opcion-admin">
+
+                <h2>Documentacion</h2>
+
+                <p>
+                    Administrar documentos, categorías y contenido disponible
+                    para los pacientes.
+                </p>
+
+                <a class="boton" href="documentosAdmin.html">
+                    Gestionar Documentos
+                </a>
+
+            </article>
+
+                <article class="opcion-admin">
+
+                <h2>Gestion de Encuestas</h2>
+
+                <p>
+                   Gestionar las encuestas publicadas en el portal de informacion.
+                </p>
+
+                <a class="boton" href="../modulo2/encuestasAdmin.html">
+                    Gestionar Encuestas.
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="../assets/js/protegerSesion.js"></script>
+    <script src="../assets/js/logout.js"></script>
+
+</body>
+
+</html>

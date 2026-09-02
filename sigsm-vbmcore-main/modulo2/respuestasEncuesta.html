@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/estiloadmin.css">
+
+    <title>Respuestas de Encuesta</title>
+
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-login="login.html">
+
+<header class="header">
+
+    <a href="https://www.hc.edu.uy/" target="_blank" class="logo">
+        <img src="../assets/img/Logo_Hc.png" alt="Hospital">
+    </a>
+
+    <div class="admin">
+        Administrador
+    </div>
+
+    <a class="boton" href="encuestasAdmin.html">
+        ← Volver
+    </a>
+
+</header>
+
+
+<section class="dashboard">
+
+    <h1 id="tituloEncuesta">
+        Respuestas de Encuesta
+    </h1>
+
+    <p id="mensaje"></p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Pregunta</th>
+                <th>Respuesta</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaRespuestas">
+
+            <tr>
+                <td colspan="4">
+                    Cargando respuestas...
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<script src="../assets/js/protegerSesion.js"></script>
+
+<script>
+
+const tabla = document.querySelector("#tablaRespuestas");
+const titulo = document.querySelector("#tituloEncuesta");
+const mensaje = document.querySelector("#mensaje");
+
+const parametros = new URLSearchParams(window.location.search);
+const id = parametros.get("id");
+
+
+async function cargarRespuestas() {
+
+    if (!id) {
+        mensaje.textContent = "Encuesta no válida.";
+        return;
+    }
+
+    try {
+
+        const respuesta = await fetch(
+            "../php/encuestas.php?action=respuestas&id=" + id
+        );
+
+        const resultado = await respuesta.json();
+
+
+        if (!resultado.ok) {
+            mensaje.textContent = resultado.mensaje;
+            return;
+        }
+
+
+        titulo.textContent =
+            "Respuestas: " + resultado.titulo;
+
+        tabla.innerHTML = "";
+
+
+        if (resultado.respuestas.length === 0) {
+
+            tabla.innerHTML = `
+                <tr>
+                    <td colspan="4">
+                        Todavía no hay respuestas.
+                    </td>
+                </tr>
+            `;
+
+            return;
+        }
+
+
+        resultado.respuestas.forEach(function(respuesta) {
+
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+                <td>${respuesta.cedula}</td>
+                <td>${respuesta.pregunta}</td>
+                <td>${respuesta.respuesta}</td>
+                <td>${respuesta.fecha}</td>
+            `;
+
+            tabla.appendChild(fila);
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        mensaje.textContent =
+            "Error al cargar las respuestas.";
+    }
+}
+
+
+cargarRespuestas();
+
+</script>
+
+</body>
+</html>

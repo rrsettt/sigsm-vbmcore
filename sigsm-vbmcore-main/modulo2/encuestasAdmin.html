@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estiloadmin.css?v=2">
+    <title>Administrar Encuestas</title>
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-login="login.html">
+
+<header class="header">
+
+    <a
+        href="https://www.hc.edu.uy/"
+        target="_blank"
+        class="logo"
+    >
+        <img
+            src="../assets/img/Logo_Hc.png"
+            alt="Hospital de Clínicas"
+        >
+    </a>
+
+    <div class="admin">
+        Administrador
+    </div>
+
+    <a
+        href="admins.html"
+        class="btn"
+    >
+        ← Volver al panel
+    </a>
+
+</header>
+
+<main class="dashboard">
+
+    <h1>
+        Administración de Encuestas
+    </h1>
+
+    <a
+        href="nuevaEncuesta.html"
+        class="btn"
+    >
+        Nueva Encuesta
+    </a>
+
+    <p id="mensaje"></p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaEncuestas">
+
+            <tr>
+                <td colspan="4">
+                    Cargando encuestas...
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</main>
+
+<script src="../assets/js/protegerSesion.js"></script>
+<script src="../assets/js/encuestasAdmin.js"></script>
+
+</body>
+</html>

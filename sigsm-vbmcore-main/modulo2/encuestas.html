@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/estilo.css?v=3">
+    <title>Encuesta de Satisfacción</title>
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <div class="logo">
+        <a href="portal.html">
+            <img src="../assets/img/Logo_Hc.png" alt="Hospital de Clínicas">
+        </a>
+    </div>
+
+    <div class="acciones-header">
+        <a class="boton" href="portal.html">
+            ← Volver al Portal
+        </a>
+    </div>
+
+</header>
+
+<main class="contenedor contenedor-simple">
+
+    <section class="encuesta">
+
+        <h2 id="tituloEncuesta">Encuesta</h2>
+
+        <p id="descripcionEncuesta">
+            Cargando encuesta...
+        </p>
+
+        <form id="formEncuesta" style="display:none;">
+
+            <label for="cedula">
+                Cédula
+            </label>
+
+            <input
+                type="text"
+                id="cedula"
+                name="cedula"
+                placeholder="Ingrese su cédula"
+                required
+            >
+
+            <div id="preguntas"></div>
+
+            <p id="mensaje"></p>
+
+            <button type="submit" class="boton">
+                Enviar respuestas
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="../assets/js/encuestas.js"></script>
+
+</body>
+</html>
