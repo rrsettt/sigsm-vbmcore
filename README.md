@@ -27,7 +27,8 @@ El portal y las encuestas son de acceso público y no requieren una cuenta.
 - Registro manual de los datos del paciente.
 - Registro de conductor, enfermero, vehículo, origen y destino.
 - Listado y edición de traslados.
-- Estados: Pendiente, En curso y Llegó.
+- Estados: Pendiente, En curso, Llegó y Cancelado.
+- Cancelación de traslados pendientes o en curso, conservando el registro en el historial.
 - Registro de horarios de salida y llegada.
 - Filtros por estado, paciente, cédula o vehículo.
 - Actualización automática del listado cada diez segundos.
@@ -50,13 +51,13 @@ Los funcionarios actualizan los estados manualmente. El mapa es una imagen de re
 1. Colocar la carpeta `sigsm-vbmcore-main` dentro de `htdocs`.
 2. Iniciar Apache y MySQL desde XAMPP.
 3. Si existe una instalación anterior, respaldar la base de datos y la carpeta `uploads`.
-4. Importar `sql/VBMCoreDataBase.sql` desde phpMyAdmin utilizando `root` u otra cuenta con permisos para crear usuarios y asignar privilegios.
+4. Importar primero `sql/schema.sql` y después `sql/data.sql` desde phpMyAdmin utilizando `root` u otra cuenta con permisos para crear usuarios y asignar privilegios.
 5. Verificar los datos de conexión en `datos/conexion.php`.
 6. Comprobar que PHP pueda escribir en `uploads/documentos` y `uploads/imagenes`. Configurar `upload_max_filesize` de al menos `10M` y `post_max_size` de al menos `24M`.
 7. Apache debe permitir las reglas de los archivos `.htaccess` incluidos.
 8. Acceder mediante `http://localhost/sigsm-vbmcore-main/index.html`.
 
-El SQL crea o actualiza la base y configura las cuentas de MariaDB. Importarlo sobre una instalación existente conserva los registros; no reinicia la base desde cero.
+`schema.sql` crea o actualiza la estructura de la base y configura las cuentas de MariaDB. `data.sql` carga los datos iniciales. Importarlos sobre una instalación existente conserva los registros; no reinicia la base desde cero.
 
 También restablece las contraseñas de las cuentas web de demostración y puede volver a agregar los ejemplos eliminados.
 
@@ -94,7 +95,7 @@ Las credenciales incluidas son para demostración y deben configurarse para la i
 - `assets`: CSS, JavaScript e imágenes.
 - `php`: procesamiento, validaciones, sesiones y permisos.
 - `datos`: conexión y clases de acceso a la base de datos.
-- `sql`: archivo único de instalación y actualización.
+- `sql`: `schema.sql` para la estructura y los permisos; `data.sql` para los datos iniciales.
 - `uploads`: documentos e imágenes cargadas.
 - `docs`: manual de usuario y documentación del proyecto.
 
