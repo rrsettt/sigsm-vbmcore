@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/estilo.css?v=11">
+        <title>Hospital de Clínicas</title>
+    </head>
+    <body>
+        <header class="encabezado">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/Logo_Hc.png" alt="Hospital de Clínicas">
+                </a>
+            </div>
+            <nav class="navegacion">
+                <a class="btn btn-secundario" href="modulo1/login.html">Acceso al personal</a>
+            </nav>
+        </header>
+        <div class="contenedor">
+            <aside class="barra-lateral">
+                <section class="servicios" id="categorias">
+                    <h2>Categorías</h2>
+                    <p class="ayuda-categorias">Elegí un tema para filtrar los documentos.</p>
+                    <div id="listaCategorias">
+                        <p>Cargando categorías...</p>
+                    </div>
+                </section>
+                <section class="encuesta encuesta-portal">
+                    <img class="imagen-encuesta" src="assets/img/encuesta.svg" alt="Formulario de opinión con respuestas marcadas">
+                    <h2>Tu opinión cuenta</h2>
+                    <p>
+				Contanos tu experiencia y ayudanos a mejorar la atención.
+			</p>
+                    <p id="encuestaPortal" aria-live="polite">Consultando encuestas disponibles...</p>
+                    <a href="modulo1/encuestas.html" class="boton" id="botonEncuesta" hidden>
+				Ir a encuesta
+			</a>
+                </section>
+            </aside>
+            <main class="contenido">
+                <section class="principal">
+                    <img
+				class="imagen-principal" alt="Hospital de Clínicas"
+				src="assets/img/Clinicas.png"
+			>
+                    <div class="texto-principal">
+                        <h1>Portal de Documentación</h1>
+                        <p>
+					Bienvenido al portal de documentación del Hospital de Clínicas.
+					Aquí podrá acceder a documentación médica actualizada,
+					información sobre tratamientos y recursos de interés para pacientes.
+				</p>
+                    </div>
+                </section>
+                <section class="lista-documentos" aria-labelledby="tituloDocumentos">
+                    <div class="cabecera-documentos">
+                        <h2 id="tituloDocumentos">Documentos disponibles</h2>
+                    </div>
+                    <div class="documentacion" id="documentos">
+                        <p>Cargando documentos...</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="pie-pagina">
+            <div class="pie-contenido">
+                <div class="pie-hospital">
+                    <h2>Hospital de Clínicas</h2>
+                    <p>Dr. Manuel Quintela · Universidad de la República</p>
+                    <p>Av. Italia 2870, Montevideo, Uruguay</p>
+                </div>
+                <nav class="pie-enlaces" aria-label="Redes y sitio del hospital">
+                    <h2>Seguí al hospital</h2>
+                    <a href="https://www.instagram.com/clinicas_uy/">Instagram ↗</a>
+                    <a href="https://twitter.com/hcmquintela">X / Twitter ↗</a>
+                    <a href="https://www.youtube.com/channel/UCtTqB9ffUjk1bIIiE9vkXZQ">YouTube ↗</a>
+                    <a href="https://www.hc.edu.uy/">Sitio institucional ↗</a>
+                </nav>
+            </div>
+            <div class="firma-proyecto">
+                <span>Portal de documentación · Proyecto de egreso</span>
+                <span class="marca-proyecto">Desarrollado por <strong>VBM<span>Core</span>
+                    </strong>
+                </span>
+            </div>
+        </footer>
+        <script src="assets/js/portal.js?v=10"></script>
+    </body>
+</html>

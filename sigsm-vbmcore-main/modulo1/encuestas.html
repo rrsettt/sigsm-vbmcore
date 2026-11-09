@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encuesta · Hospital de Clínicas</title>
+        <link rel="stylesheet" href="../assets/css/estilo.css?v=11">
+    </head>
+    <body>
+        <header class="encabezado">
+            <a class="logo" href="../index.html">
+                <img src="../assets/img/Logo_Hc.png" alt="Hospital de Clínicas">
+            </a>
+            <a class="btn btn-secundario" href="../index.html">← Volver al portal</a>
+        </header>
+        <main class="contenedor-encuesta">
+            <section class="panel-encuesta">
+                <div class="presentacion-encuesta">
+                    <img src="../assets/img/encuesta.svg" alt="Formulario de opinión">
+                    <div>
+                        <span class="etiqueta-publica">Tu opinión cuenta</span>
+                        <h1 id="tituloEncuesta">Encuesta</h1>
+                        <p id="descripcionEncuesta">Cargando encuesta...</p>
+                    </div>
+                </div>
+                <p>La encuesta es anónima. No escriba su nombre ni su cédula en las respuestas.</p>
+                <div class="selector-encuesta">
+                    <label for="selectorEncuesta">Elegí la encuesta que querés responder</label>
+                    <select id="selectorEncuesta" disabled><option>Cargando encuestas...</option></select>
+                </div>
+                <form id="formEncuesta" style="display:none;">
+                    <div id="preguntas"></div>
+                    <p id="mensaje" class="mensaje" role="status"></p>
+                    <button type="submit" class="btn">Enviar respuestas</button>
+                </form>
+            </section>
+        </main>
+        <footer class="pie-pagina">
+            <div class="pie-contenido">
+                <div class="pie-hospital">
+                    <h2>Hospital de Clínicas</h2>
+                    <p>Dr. Manuel Quintela · Universidad de la República</p>
+                    <p>Av. Italia 2870, Montevideo, Uruguay</p>
+                </div>
+                <nav class="pie-enlaces" aria-label="Redes y sitio del hospital">
+                    <h2>Seguí al hospital</h2>
+                    <a href="https://www.instagram.com/clinicas_uy/">Instagram ↗</a>
+                    <a href="https://twitter.com/hcmquintela">X / Twitter ↗</a>
+                    <a href="https://www.youtube.com/channel/UCtTqB9ffUjk1bIIiE9vkXZQ">YouTube ↗</a>
+                    <a href="https://www.hc.edu.uy/">Sitio institucional ↗</a>
+                </nav>
+            </div>
+            <div class="firma-proyecto">
+                <span>Portal de documentación · Proyecto de egreso</span>
+                <span class="marca-proyecto">Desarrollado por <strong>VBM<span>Core</span>
+                    </strong>
+                </span>
+            </div>
+        </footer>
+        <script src="../assets/js/encuestas.js?v=10"></script>
+    </body>
+</html>

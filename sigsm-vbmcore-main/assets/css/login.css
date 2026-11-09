@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #0a2f4d;
+    line-height: 1.55;
+}
+a {
+    color: #0f6fb0;
+}
+button, input, select, textarea {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+button:disabled {
+    cursor: wait;
+    opacity: .6;
+}
+[hidden] {
+    display: none !important;
+}
+.header, .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    border-bottom: 1px solid #e1e8f0;
+    flex-wrap: wrap;
+    padding: 16px 5%;
+}
+.logo img {
+    display: block;
+    object-fit: contain;
+}
+.acciones-header, .acciones-formulario, .acciones-fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+.btn, .boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 18px;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    background: #0f6fb0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+}
+.btn:hover, .boton:hover {
+    background: #0a4d80;
+}
+.btn-secundario {
+    background: white;
+    color: #0f6fb0;
+    border-color: #c6d8ef;
+}
+.btn-secundario:hover {
+    background: #eaf4ff;
+}
+.btn-peligro {
+    color: #b42332;
+    background: #fff0f1;
+    border-color: #f5c4ca;
+}
+.btn-peligro:hover {
+    background: #fce0e4;
+}
+.btn-exito {
+    background: #087c60;
+}
+.btn-exito:hover {
+    background: #06634d;
+}
+label {
+    font-weight: 600;
+}
+input:not([type="checkbox"]):not([type="hidden"]), textarea, select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 11px 13px;
+    border: 1px solid #c9d5e4;
+    border-radius: 8px;
+    color: #0a2f4d;
+    background: white;
+}
+input[type="checkbox"] {
+    accent-color: #0f6fb0;
+    width: 18px;
+    height: 18px;
+}
+textarea {
+    resize: vertical;
+}
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #aacdf7;
+    outline-offset: 2px;
+    border-color: #0f6fb0;
+}
+h1, h2, h3 {
+    line-height: 1.25;
+}
+.ayuda {
+    font-size: 14px;
+    color: #41586b;
+}
+.mensaje {
+    margin: 14px 0;
+    overflow-wrap: anywhere;
+}
+.mensaje:empty {
+    margin: 0;
+}
+.mensaje:not(:empty) {
+    padding: 12px 16px;
+    background: #eaf4ff;
+    border-radius: 8px;
+}
+.estado {
+    display: inline-block;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.pendiente {
+    color: #855b0d;
+    background: #fff4ce;
+}
+.aprobado, .curso {
+    color: #075f49;
+    background: #d9f4e8;
+}
+.rechazado {
+    color: #a42736;
+    background: #ffe3e7;
+}
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+.contenedor-simple {
+    width: 90%;
+    max-width: 900px;
+}
+.login-card {
+    display: flex;
+    background: white;
+    border: 1px solid #e1e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(31,41,55,.06);
+}
+.login-formulario h1 {
+    font-size: 27px;
+    margin: 0 0 12px;
+}
+.login-formulario > p {
+    color: #41586b;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+.login-formulario label {
+    display: block;
+    margin: 18px 0 7px;
+}
+.login-formulario button {
+    width: 100%;
+    margin-top: 20px;
+}
+.login-imagen {
+    width: 45%;
+}
+.login-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+.boton, .btn, button, .navegacion a, .pie-pagina a {
+    transition: background-color .18s ease, color .18s ease;
+}
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #0f6fb0;
+    outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        transition: none !important;
+    }
+}
+main {
+    animation: aparecer .25s ease;
+}
+.boton, .btn, .documento-card, .opcion-admin {
+    transition: background-color .2s, border-color .2s, box-shadow .2s;
+}
+.documento-card:hover, .opcion-admin:hover {
+    border-color: #7fd8f7;
+    box-shadow: 0 5px 16px rgba(10,47,77,.08);
+}
+.opcion-admin {
+    border-top: 3px solid #00afef;
+}
+.herramientas-personal {
+    margin-top: 26px;
+}
+.herramientas-personal summary {
+    cursor: pointer;
+    color: #0f6fb0;
+    font-weight: 600;
+}
+.herramientas-personal form {
+    max-width: 650px;
+    margin-top: 20px;
+}
+@keyframes aparecer {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    main {
+        animation: none;
+    }
+}
+.logo img {
+    animation: entrar-logo .45s ease-out;
+    transition: transform .25s ease;
+    width: 165px;
+    height: 70px;
+}
+.logo:hover img, .logo:focus-within img {
+    transform: translateY(-3px) scale(1.04);
+}
+@keyframes entrar-logo {
+    0% { opacity: 0; transform: translateY(-6px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .logo img {
+        animation: none;
+        transition: none;
+    }
+    .logo:hover img, .logo:focus-within img {
+        transform: none;
+    }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f6f8fa, #eaf4fb);
+}
+.contenedor-simple {
+    max-width: 1040px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    animation: none;
+    margin: 24px auto;
+}
+.login-card {
+    width: 100%;
+    border-top: 3px solid #00afef;
+    animation: entrar-acceso .55s ease-out;
+    min-height: 0;
+}
+.login-formulario {
+    width: 100%;
+    padding: 26px;
+}
+.login-imagen {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: none;
+}
+.login-imagen img {
+    position: absolute;
+    inset: 0;
+}
+.login-presentacion {
+    position: relative;
+    padding: 28px;
+    color: white;
+    background: rgba(10,47,77,.88);
+}
+.login-presentacion h2 {
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+.login-presentacion p {
+    margin: 0;
+}
+.pie-login {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 5%;
+    background: white;
+    border-top: 1px solid #e1e8f0;
+    color: #41586b;
+    font-size: 13px;
+}
+@keyframes entrar-acceso {
+    0% { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .login-card {
+        animation: none;
+    }
+}
+.navegacion a.btn {
+    padding: 11px 18px;
+    font-size: 14px;
+}
+.acciones-header {
+    margin-left: auto;
+    justify-content: flex-end;
+    width: 100%;
+}
+.header > a.btn, .encabezado > a.btn {
+    margin-left: auto;
+}
+.btnEditar, .btnEliminar {
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 8px 12px;
+    border: 1px solid #c6d8ef;
+}
+.btnEliminar {
+    color: #b42332;
+    background: #fff0f1;
+    border-color: #f5c4ca;
+}
+.btnEditar:hover {
+    background: #eaf4ff;
+}
+.btnEliminar:hover {
+    background: #fce0e4;
+}
+.identidad {
+    font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .header, .encabezado {
+        flex-wrap: nowrap;
+        padding: 20px 5%;
+    }
+    .logo img {
+        width: 210px;
+        height: 90px;
+    }
+    .identidad {
+        font-size: inherit;
+    }
+    .acciones-header {
+        width: auto;
+    }
+    .contenedor-simple {
+        margin: 40px auto;
+    }
+    .login-card {
+        min-height: 500px;
+    }
+    .login-formulario {
+        width: 55%;
+        padding: 44px;
+    }
+    .login-imagen {
+        display: flex;
+    }
+}
